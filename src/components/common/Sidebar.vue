@@ -30,53 +30,110 @@
                         title: '自述'
                     },
                     {
-                        icon: 'el-icon-menu',
-                        index: '2',
-                        title: '表格',
-                        subs: [
-                            {
-                                index: 'basetable',
-                                title: '基础表格'
-                            },
-                            {
-                                index: 'vuetable',
-                                title: 'Vue表格组件'
-                            }
-                        ]
-                    },
-                    {
-                        icon: 'el-icon-date',
-                        index: '3',
-                        title: '表单',
-                        subs: [
-                            {
-                                index: 'baseform',
-                                title: '基本表单'
-                            },
-                            {
-                                index: 'vueeditor',
-                                title: '编辑器'
-                            },
-                            {
-                                index: 'markdown',
-                                title: 'markdown'
-                            },
-                            {
-                                index: 'upload',
-                                title: '文件上传'
-                            }
-                        ]
+                        icon: 'el-icon-star-on',
+                        index: 'basecharts',
+                        title: '提交作业'
                     },
                     {
                         icon: 'el-icon-star-on',
                         index: 'basecharts',
-                        title: '图表'
+                        title: '提交项目'
+                    },
+                    {
+                        icon: 'el-icon-menu',
+                        index: '2',
+                        title: '提交报告',
+                        subs: [
+                            {
+                                index: 'basetable',
+                                title: '提交日报'
+                            },
+                            {
+                                index: 'vuetable',
+                                title: '提交周报'
+                            },
+                            {
+                                index: 'vuetable',
+                                title: '历史报告',
+                            },
+                            {
+                                index: 'vuetable',
+                                title: '历史周报',
+                            },
+                        ]
+                    },
+                    {
+                        icon: 'el-icon-menu',
+                        index: '2',
+                        title: '问卷调查',
+                        subs:[
+                            {
+                                index: 'basetable',
+                                title: '填写问卷'
+                            },
+                            {
+                                index: 'basetable',
+                                title: '历史问卷'
+                            },
+                        ]
+                    },
+                    {
+                        icon: 'el-icon-date',
+                        index: 'upload',
+                        title: '上传简历'
                     },
                     {
                         icon: 'el-icon-upload2',
                         index: 'drag',
-                        title: '拖拽'
-                    }
+                        title: '就业申请'
+                    },
+                    {
+                        icon: 'el-icon-date',
+                        index: '3',
+                        title: '学员信息查询',
+                        subs: [
+                            {
+                                index: 'baseform',
+                                title: '学员档案'
+                            },
+                            {
+                                index: 'vueeditor',
+                                title: '考勤记录'
+                            },
+                            {
+                                index: 'markdown',
+                                title: '违纪记录'
+                            },
+                            {
+                                index: 'markdown',
+                                title: '表扬记录'
+                            },
+                            {
+                                index: 'upload',
+                                title: '作业完成情况'
+                            },
+                            {
+                                index: 'vueeditor',
+                                title: '项目管理积极性'
+                            },
+                            {
+                                index: 'vueeditor',
+                                title: '班级管理积极性'
+                            },
+                            {
+                                index: 'vueeditor',
+                                title: '演讲查询'
+                            },
+                            {
+                                index: 'vueeditor',
+                                title: '分组讨论查询'
+                            },
+                            {
+                                index: 'vueeditor',
+                                title: '综合评分'
+                            },
+                        ]
+                    },
                 ]
             }
         },
