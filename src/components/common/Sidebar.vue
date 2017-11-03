@@ -79,7 +79,7 @@
                     },
                     {
                         icon: 'el-icon-date',
-                        index: 'upload',
+                        index: 'uploadresume',
                         title: '上传简历'
                     },
                     {
