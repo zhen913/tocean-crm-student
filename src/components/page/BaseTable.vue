@@ -2,18 +2,12 @@
     <div class="table">
         <div class="crumbs">
             <el-breadcrumb separator="/">
-                <el-breadcrumb-item><i class="el-icon-menu"></i> 表格</el-breadcrumb-item>
-                <el-breadcrumb-item>基础表格</el-breadcrumb-item>
+                <el-breadcrumb-item>当前功能：调查列表管理</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="handle-box">
-            <el-button type="primary" icon="delete" class="handle-del mr10" @click="delAll">批量删除</el-button>
-            <el-select v-model="select_cate" placeholder="筛选省份" class="handle-select mr10">
-                <el-option key="1" label="广东省" value="广东省"></el-option>
-                <el-option key="2" label="湖南省" value="湖南省"></el-option>
-            </el-select>
-            <el-input v-model="select_word" placeholder="筛选关键词" class="handle-input mr10"></el-input>
-            <el-button type="primary" icon="search" @click="search">搜索</el-button>
+                <el-option>调查列表</el-option>
+                <el-option label="湖南省" value="调查列表"></el-option>
         </div>
         <el-table :data="data" border style="width: 100%" ref="multipleTable" @selection-change="handleSelectionChange">
             <el-table-column type="selection" width="55"></el-table-column>
@@ -71,7 +65,7 @@
                         }
                     }
                     if(!is_del){
-                        if(d.address.indexOf(self.select_cate) > -1 && 
+                        if(d.address.indexOf(self.select_cate) > -1 &&
                             (d.name.indexOf(self.select_word) > -1 ||
                             d.address.indexOf(self.select_word) > -1)
                         ){

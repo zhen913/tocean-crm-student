@@ -18,6 +18,10 @@ export default new Router({
                     component: resolve => require(['../components/page/Readme.vue'], resolve)
                 },
                 {
+                    path: '/submintreporttable',
+                    component: resolve => require(['../components/page/SubmitReport.vue'], resolve)     //SubmitReport调查列表组件
+                },
+                {
                     path: '/basetable',
                     component: resolve => require(['../components/page/BaseTable.vue'], resolve)
                 },
