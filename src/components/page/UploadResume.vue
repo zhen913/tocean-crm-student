@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <div class="plugins-tips">
             <el-breadcrumb separator="：">
                 <el-breadcrumb-item><i class="el-icon-date"></i> 当前功能</el-breadcrumb-item>

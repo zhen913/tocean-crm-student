@@ -93,7 +93,7 @@
                         title: '学员信息查询',
                         subs: [
                             {
-                                index: 'baseform',
+                                index: 'studentfile',
                                 title: '学员档案'
                             },
                             {

@@ -52,6 +52,10 @@ export default new Router({
                 {
                     path: '/uploadresume',
                     component: resolve => require(['../components/page/UploadResume.vue'], resolve)    // 拖拽列表组件
+                },
+                {
+                    path: '/studentfile',
+                    component: resolve => require(['../components/page/StudentFile.vue'], resolve)
                 }
             ]
         },
