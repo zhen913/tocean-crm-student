@@ -41,23 +41,23 @@
                     },
                     {
                         icon: 'el-icon-menu',
-                        index: '2',
+                        index: '1',
                         title: '提交报告',
                         subs: [
                             {
-                                index: 'basetable',
+                                index: 'submintreporttable',
                                 title: '提交日报'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'submintreporttable',
                                 title: '提交周报'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'submintreporttable',
                                 title: '历史报告',
                             },
                             {
-                                index: 'vuetable',
+                                index: 'submintreporttable',
                                 title: '历史周报',
                             },
                         ]
@@ -68,11 +68,11 @@
                         title: '问卷调查',
                         subs:[
                             {
-                                index: 'basetable',
+                                index: 'submintreporttable',
                                 title: '填写问卷'
                             },
                             {
-                                index: 'basetable',
+                                index: 'submintreporttable',
                                 title: '历史问卷'
                             },
                         ]
@@ -83,7 +83,7 @@
                         title: '上传简历'
                     },
                     {
-                        icon: 'el-icon-upload2',
+                        icon: 'el-icon-upload',
                         index: 'drag',
                         title: '就业申请'
                     },
