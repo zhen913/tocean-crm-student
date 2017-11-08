@@ -8,96 +8,88 @@
             </el-breadcrumb>
         </div>
 
-        <div class="plugins-tips" value="你已经提交了就业信息！" style="text-align: right">
-
+        <div class="plugins-tips" style="text-align:left">
+            <label>你已经提交信息</label>
+            <input type="button" value="提交" style="color: #1A438E"/>
         </div>
+
         <div class="title">
+            <el-collapse accordion>
+                <el-collapse-item>
+                    <template slot="title">
+                        申请列表（+点击标题栏展开）
+                    </template>
+                    <el-table
+                        :data="tableData3"
+                        height="250"
+                        border
+                        style="width: 100%">
+                        <el-table-column
+                            prop="name"
+                            label="姓名"
+                            width="180">
+                        </el-table-column>
+                        <el-table-column
+                            prop="class"
+                            label="班级"
+                            width="180">
+                        </el-table-column>
+                        <el-table-column
+                            prop="direction"
+                            label="期望就业方向">
+                            <el-select v-model="value" placeholder="Android">
+                                <i class="el-icon-caret-bottom"></i>
+                                <el-option
+                                    v-for="item in options"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+
+                                </el-option>
+                            </el-select>
+
+                        </el-table-column>
+
+                        <el-table-column
+                            prop="address"
+                            label="期望就业地点">
+                            <el-select v-model="value" placeholder="广州">
+                                <i class="el-icon-caret-bottom"></i>
+                                <el-option
+                                    v-for="item in options"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+                                </el-option>
+                            </el-select>
+                        </el-table-column>
+
+                        <el-table-column
+                            prop="time"
+                            label="期望推荐时间">
+                            <el-input v-model="input" placeholder="请输入内容"></el-input>
+                        </el-table-column>
+                        <el-table-column
+                            prop="tuoshen"
+                            label="是否需要拓胜推荐">
+                            <i class="el-icon-caret-bottom"></i>
+
+                            <el-select v-model="value" placeholder="是">
+                                <el-option
+                                    v-for="item in options"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+                                </el-option>
+                            </el-select>
+                        </el-table-column>
+            </el-table>
+                </el-collapse-item>
+            </el-collapse>
             <div style="margin-top: 0;padding-top: 0;">
-                <el-button @click="show3 = !show3" class="button" style="margin-right: auto">
-                    <el-breadcrumb separator=" ">
-                        <el-breadcrumb-item style="color:#D1E2F2;font-size:0.8em">申请列表</el-breadcrumb-item>
-                        <el-breadcrumb-item>（+点击标题栏展开）</el-breadcrumb-item>
-                    </el-breadcrumb>
-                </el-button>
-
-                <el-table
-                    :data="tableData3"
-                    height="250"
-                    border
-                    style="width: 100%">
-                    <el-table-column
-                        prop="name"
-                        label="姓名"
-                        width="180">
-                    </el-table-column>
-                    <el-table-column
-                        prop="class"
-                        label="班级"
-                        width="180">
-                    </el-table-column>
-                    <el-table-column
-                        prop="direction"
-                        label="期望就业方向">
-                        <el-select v-model="value" placeholder="Android">
-                            <i class="el-icon-caret-bottom"></i>
-                            <el-option
-                                v-for="item in options"
-                                :key="item.value"
-                                :label="item.label"
-                                :value="item.value">
-
-                            </el-option>
-                        </el-select>
-
-                    </el-table-column>
-
-                    <el-table-column
-                        prop="address"
-                        label="期望就业地点">
-                        <el-select v-model="value" placeholder="广州">
-                            <i class="el-icon-caret-bottom"></i>
-                            <el-option
-                                v-for="item in options"
-                                :key="item.value"
-                                :label="item.label"
-                                :value="item.value">
-                            </el-option>
-                        </el-select>
-                    </el-table-column>
-
-                    <el-table-column
-                        prop="time"
-                        label="期望推荐时间">
-                        <el-input v-model="input" placeholder="请输入内容"></el-input>
-                    </el-table-column>
-                    <el-table-column
-                        prop="tuoshen"
-                        label="是否需要拓胜推荐">
-                        <i class="el-icon-caret-bottom"></i>
-
-                        <el-select v-model="value" placeholder="是">
-                            <el-option
-                                v-for="item in options"
-                                :key="item.value"
-                                :label="item.label"
-                                :value="item.value">
-                            </el-option>
-                        </el-select>
-                    </el-table-column>
-
-
-
-                </el-table>
-
-
-
-
 
             </div>
         </div>
-
-
-
         <div class="plugins-tips" style="text-align: center;">
             <input type="button" value="确认提交" style="color: #1A438E;margin-right: 20px;"/>
 
