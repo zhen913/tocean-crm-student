@@ -10,7 +10,6 @@
 
         <div class="plugins-tips" style="text-align:left">
             <label>你已经提交信息</label>
-            <input type="button" value="提交" style="color: #1A438E"/>
         </div>
 
         <div class="title">
