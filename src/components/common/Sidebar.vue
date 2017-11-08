@@ -84,7 +84,7 @@
                     },
                     {
                         icon: 'el-icon-upload2',
-                        index: 'drag',
+                        index: 'jobapplication',
                         title: '就业申请'
                     },
                     {

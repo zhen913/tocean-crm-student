@@ -48,6 +48,10 @@ export default new Router({
                 {
                     path: '/drag',
                     component: resolve => require(['../components/page/DragList.vue'], resolve)    // 拖拽列表组件
+                },
+                {
+                    path: '/jobapplication',
+                    component: resolve => require(['../components/page/JobApplication.vue'], resolve)    // 拖拽列表组件
                 }
             ]
         },
