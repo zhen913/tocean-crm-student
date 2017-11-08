@@ -18,6 +18,11 @@ export default new Router({
                     component: resolve => require(['../components/page/Readme.vue'], resolve)
                 },
                 {
+                    path: '/submintreporttable',
+                    component: resolve => require(['../components/page/SubmitReport.vue'], resolve)     //SubmitReport调查列表组件
+                },
+                {
+
                     path: '/basetable',
                     component: resolve => require(['../components/page/BaseTable.vue'], resolve)
                 },
@@ -52,6 +57,13 @@ export default new Router({
                 {
                     path: '/jobapplication',
                     component: resolve => require(['../components/page/JobApplication.vue'], resolve)    // 拖拽列表组件
+                },    {
+                    path: '/uploadresume',
+                    component: resolve => require(['../components/page/UploadResume.vue'], resolve)    // 拖拽列表组件
+                },
+                {
+                    path: '/studentfile',
+                    component: resolve => require(['../components/page/StudentFile.vue'], resolve)
                 }
             ]
         },

@@ -41,23 +41,23 @@
                     },
                     {
                         icon: 'el-icon-menu',
-                        index: '2',
+                        index: '1',
                         title: '提交报告',
                         subs: [
                             {
-                                index: 'basetable',
+                                index: 'submintreporttable',
                                 title: '提交日报'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'submintreporttable',
                                 title: '提交周报'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'submintreporttable',
                                 title: '历史报告',
                             },
                             {
-                                index: 'vuetable',
+                                index: 'submintreporttable',
                                 title: '历史周报',
                             },
                         ]
@@ -68,18 +68,18 @@
                         title: '问卷调查',
                         subs:[
                             {
-                                index: 'basetable',
+                                index: 'submintreporttable',
                                 title: '填写问卷'
                             },
                             {
-                                index: 'basetable',
+                                index: 'submintreporttable',
                                 title: '历史问卷'
                             },
                         ]
                     },
                     {
                         icon: 'el-icon-date',
-                        index: 'upload',
+                        index: 'uploadresume',
                         title: '上传简历'
                     },
                     {
@@ -93,7 +93,7 @@
                         title: '学员信息查询',
                         subs: [
                             {
-                                index: 'baseform',
+                                index: 'studentfile',
                                 title: '学员档案'
                             },
                             {
