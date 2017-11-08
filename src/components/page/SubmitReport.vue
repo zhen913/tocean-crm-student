@@ -5,13 +5,12 @@
                 <el-breadcrumb>当前功能：<b>调查列表管理</b></el-breadcrumb>
         </div>
         <div class="plugins-tips" style="margin-top: 0;padding-top: 0;">
-            <el-button @click="show11 = !show11" class="button" style="margin-left: 0;margin-right: 0;">
+            <el-button @click="show11 = !show11" class="button" style="margin-left: auto;">
                 <el-breadcrumb separator=" ">
                     <el-breadcrumb-item style="color:#D1E2F2;font-size:0.8em">调查列表</el-breadcrumb-item>
                     <el-breadcrumb-item>(+单击标题栏展开)</el-breadcrumb-item>
                 </el-breadcrumb>
             </el-button>
-
             <el-main v-show="show11">
                 <table>
                     <tr>

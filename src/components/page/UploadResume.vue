@@ -27,7 +27,8 @@
                                     <div class="grid-content bg-purple-light" style="flex-grow: 1;margin-right: 0;">
                                     <el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="input21">
                                     </el-input>
-                                </div></el-col>
+                                    </div>
+                                    </el-col>
                                 <el-col :span="2"><div class="grid-content row-bg">
                                     <input type="button" value="预览..."/>
                                 </div></el-col>

@@ -19,7 +19,12 @@ export default new Router({
                 },
                 {
                     path: '/submintreporttable',
-                    component: resolve => require(['../components/page/SubmitReport.vue'], resolve)     //SubmitReport调查列表组件
+                    component: resolve => require(['../components/page/SubmitReport.vue'], resolve)     //SubmitReport调查列表页面
+                },
+                ,
+                {
+                    path: '/vueeditor',
+                    component: resolve => require(['../components/page/ARecords.vue'], resolve)     //ARecords考勤记录页面
                 },
                 {
                     path: '/basetable',
