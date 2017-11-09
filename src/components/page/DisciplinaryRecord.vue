@@ -8,20 +8,20 @@
             <div>
                 <el-form :inline="true" :model="formInline" class="demo-form-inline">
                     <el-form-item label="班级">
-                        <el-select v-model="formInline.region" placeholder="">
+                        <el-select v-model="formInline.banji" placeholder="">
                             <el-option label="信管" value="xingguang"></el-option>
                             <el-option label="软件" value="ruanjian"></el-option>
                             <el-option label="计应" value="jiying"></el-option>
                         </el-select>
                     </el-form-item>
                     <el-form-item label="学员">
-                        <el-input v-model="formInline.user" placeholder=""/>
+                        <el-input v-model="formInline.xueyuan" placeholder=""/>
                     </el-form-item>
                     <el-form-item>
                         <div class="block">
                             <span class="demonstration">时间：</span>
                             <el-date-picker
-                                v-model="value7"
+                                v-model="value6"
                                 type="daterange"
                                 align="right"
                                 unlink-panels
@@ -141,6 +141,7 @@
     export default {
         components: {ElFormItem}, data() {
             return {
+                activeNames: ['1'],
                 formInline: {
                     user: '',
                     region: ''

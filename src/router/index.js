@@ -60,6 +60,10 @@ export default new Router({
                 {
                     path: '/submitjob',
                     component: resolve => require(['../components/page/SubmitJob.vue'], resolve)
+                },
+                {
+                    path: '/JobCompletion',
+                    component: resolve => require(['../components/page/JobCompletion.vue'], resolve)
                 }
             ]
         },

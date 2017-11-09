@@ -5,10 +5,10 @@
             <el-col :span="24" class="tj"><div class="tj-1"><el-button size="mini" class="but">提交</el-button></div></el-col>
         </el-row>
         <div class="con">
-            <el-container >
-                <el-collapse v-model="activeNames" @change="handleChange">
+            <div>
+                <el-collapse v-model="activeNames">
                     <el-collapse-item title="基本资料 (+ 单击标题栏展开)" name="1" >
-                <el-main>
+                <div>
                     <span class="no">您不是学员，不能提交作业！</span>
                     <div class="biao">
                         <div class="biaoge">
@@ -29,10 +29,10 @@
                         </el-form>
                     </div>
                     </div>
-                </el-main>
+                </div>
                     </el-collapse-item>
                 </el-collapse>
-            </el-container>
+            </div>
            </div>
             <el-col :span="24" class="tj">
                 <div class="qd">

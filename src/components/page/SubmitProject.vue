@@ -4,9 +4,9 @@
             <el-col :span="24"><div class="gn"><p class="t-dq">当前功能：</p><p class="t-zy">提交项目</p></div></el-col>
             <el-col :span="24" class="tj"><div class="tj-1"><el-button size="mini" class="but">提交</el-button></div></el-col>
         </el-row>
-        <el-container class="con">
-            <el-header class="jb" ><div class="zl">基本资料</div><div class="zk">(+ 单击标题栏展开)</div></el-header>
-            <el-main>
+        <div class="con">
+            <div class="jb" ><div class="zl">基本资料</div><div class="zk">(+ 单击标题栏展开)</div></div>
+            <div>
                 <span class="no">您不是学员，不能提交项目！</span>
                 <div class="biao">
                     <div class="biaoge">
@@ -35,8 +35,8 @@
                     </el-form>
                     </div>
                 </div>
-            </el-main>
-        </el-container>
+            </div>
+        </div>
         <el-col :span="24" class="tj">
             <div class="qd">
                 <el-button size="mini" class="but-1">
