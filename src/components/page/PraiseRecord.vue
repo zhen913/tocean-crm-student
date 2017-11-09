@@ -2,7 +2,7 @@
     <div>
         <div class="gn">
         <p class="t-dq">当前功能：</p>
-        <p class="t-zy">学员违纪信息查询</p>
+        <p class="t-zy">学员表扬信息查询</p>
         </div>
         <div class="biao">
             <div>
@@ -51,33 +51,34 @@
                             border
                             style="width: 100%">
                             <el-table-column
-                                prop="xuehao"
-                                label="学号"
+                                prop="xuhao"
+                                label="序号"
                                 width="80">
                             </el-table-column>
                             <el-table-column
-                                prop="xueyuan"
-                                label="学员"
-                                width="180">
+                                prop="xuehao"
+                                label="学号"
+                                width="80">
                             </el-table-column>
                             <el-table-column
                                 prop="banji"
                                 label="班级"
                                 width="180">
                             </el-table-column>
+
                             <el-table-column
                                 prop="shijina"
-                                label="违纪时间"
+                                label="表扬时间"
                                 width="180">
                             </el-table-column>
                             <el-table-column
                                 prop="qingkuan"
-                                label="情况"
+                                label="表扬情况"
                                 width="200">
                             </el-table-column>
                             <el-table-column
-                                prop="taidu"
-                                label="学员违纪态度"
+                                prop="jiafen"
+                                label="表扬加分"
                                 >
                             </el-table-column>
 
@@ -87,7 +88,6 @@
                 </el-collapse-item>
             </el-collapse>
         </div>
-
         <div class="jdt">
 
             <el-pagination
@@ -147,34 +147,22 @@
                     region: ''
                 },
                 tableData: [{
+                    xuhao:'01',
                     xuehao: '1',
-                    xueyuan: '小丘',
+                    xueyuan: 'AA',
                     banji: '信管',
                     shijina:'2017-09-10',
-                    qingkuan:'早上迟到',
-                    taidu:'态度恶劣'
+                    qingkuan:'美若天仙',
+                   jiafen:'+10'
 
                 }, {
+                    xuhao:'02',
                     xuehao: '2',
-                    xueyuan: '小李',
+                    xueyuan: 'CCC',
                     banji: '软件',
                     shijina:'2017-09-15',
-                    qingkuan:'旷课',
-                    taidu:'态度良好'
-                }, {
-                    xuehao: '3',
-                    xueyuan: '小陈',
-                    banji: '信管',
-                    shijina:'2017-5-4',
-                    qingkuan:'早上迟到',
-                    taidu:'态度良好'
-                }, {
-                    xuehao: '4',
-                    xueyuan: '小林',
-                    banji: '计应',
-                    shijina:'2017-6-6',
-                    qingkuan:'旷课',
-                    taidu:'态度良好'
+                    qingkuan:'王者坑王',
+                    jiafen:'+8'
                 }],
                 pickerOptions2: {
                     shortcuts: [{

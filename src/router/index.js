@@ -35,6 +35,10 @@ export default new Router({
                     component: resolve => require(['../components/page/DisciplinaryRecord.vue'], resolve)     // Vue-Quill-Editor组件
                 },
                 {
+                    path: '/PraiseRecord',
+                    component: resolve => require(['../components/page/PraiseRecord.vue'], resolve)     // Vue-Quill-Editor组件
+                },
+                {
                     path: '/upload',
                     component: resolve => require(['../components/page/Upload.vue'], resolve)       // Vue-Core-Image-Upload组件
                 },

@@ -105,7 +105,7 @@
                                 title: '违纪记录'
                             },
                             {
-                                index: 'markdown',
+                                index: 'PraiseRecord',
                                 title: '表扬记录'
                             },
                             {
