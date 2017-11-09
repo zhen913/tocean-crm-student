@@ -34,7 +34,9 @@
                     password: [
                         { required: true, message: '请输入密码', trigger: 'blur' }
                     ]
-                }
+                },
+                errorMsg:'',
+                url:'/student/login'
             }
         },
         methods: {
@@ -42,13 +44,33 @@
                 const self = this;
                 self.$refs[formName].validate((valid) => {
                     if (valid) {
-                        localStorage.setItem('ms_username',self.ruleForm.username);
-                        self.$router.push('/readme');
-                    } else {
-                        console.log('error submit!!');
+                        var param ={
+                            username:self.ruleForm.username,
+                            password:self.ruleForm.password
+                        };
+                        self.$axios.post(self.url,param).then((res)=>{
+                            console.log(res.data.success);
+                            if (res.data.success){
+                                localStorage.setItem('USERNAME',self.ruleForm.username);
+                                localStorage.setItem('JWT_TOKEN',res.data.result);
+                                self.$router.push('/readme');
+                            }else {
+                                self.errorMsg= res.data.error;
+                            }
+                        })
+                    }else {
+                        console.log('error submit!!')
                         return false;
                     }
-                });
+                })
+                /*
+                 localStorage.setItem('ms_username',self.ruleForm.username);
+                 self.$router.push('/readme');
+                 } else {
+                 console.log('error submit!!');
+                 return false;
+                 }
+                 });*/
             }
         }
     }
@@ -68,7 +90,6 @@
         text-align: center;
         font-size:30px;
         color: #fff;
-
     }
     .ms-login{
         position: absolute;
