@@ -31,12 +31,12 @@
                     },
                     {
                         icon: 'el-icon-star-on',
-                        index: 'basecharts',
+                        index: 'submitjob',
                         title: '提交作业'
                     },
                     {
                         icon: 'el-icon-star-on',
-                        index: 'basecharts',
+                        index: 'submitproject',
                         title: '提交项目'
                     },
                     {
@@ -101,7 +101,7 @@
                                 title: '考勤记录'
                             },
                             {
-                                index: 'markdown',
+                                index: 'DisciplinaryRecord',
                                 title: '违纪记录'
                             },
                             {

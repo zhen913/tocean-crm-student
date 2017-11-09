@@ -18,12 +18,12 @@ export default new Router({
                     component: resolve => require(['../components/page/Readme.vue'], resolve)
                 },
                 {
-                    path: '/basetable',
-                    component: resolve => require(['../components/page/BaseTable.vue'], resolve)
+                    path: '/submitjob',
+                    component: resolve => require(['../components/page/SubmitJob.vue'], resolve)//提交作业
                 },
                 {
-                    path: '/vuetable',
-                    component: resolve => require(['../components/page/VueTable.vue'], resolve)     // vue-datasource组件
+                    path: '/SubmitProject',
+                    component: resolve => require(['../components/page/SubmitProject.vue'], resolve)     // vue-datasource组件
                 },
                 {
                     path: '/baseform',
@@ -34,8 +34,8 @@ export default new Router({
                     component: resolve => require(['../components/page/VueEditor.vue'], resolve)    // Vue-Quill-Editor组件
                 },
                 {
-                    path: '/markdown',
-                    component: resolve => require(['../components/page/Markdown.vue'], resolve)     // Vue-Quill-Editor组件
+                    path: '/DisciplinaryRecord',
+                    component: resolve => require(['../components/page/DisciplinaryRecord.vue'], resolve)     // Vue-Quill-Editor组件
                 },
                 {
                     path: '/upload',
