@@ -23,15 +23,15 @@
         },
         computed:{
             username(){
-                let username = localStorage.getItem('ms_username');
-                return username ? username : this.name;
+                let username = localStorage.getItem('USERNAME');
+                return username ? username : '未登录';
             }
         },
         methods:{
             handleCommand(command) {
                 if(command == 'loginout'){
-
-                    localStorage.removeItem('ms_username')
+                    localStorage.removeItem('USERNAME');
+                    localStorage.removeItem('JWT_TOKEN');
                     this.$router.push('/login');
                 }
             }

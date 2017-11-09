@@ -12,7 +12,7 @@
                 <div class="login-btn">
                     <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
                 </div>
-                <p style="font-size:12px;line-height:30px;color:#999;">Tips : 用户名和密码随便填。</p>
+                <p style="font-size:12px;line-height:30px;color:#999;">{{errorMsg}}</p>
             </el-form>
         </div>
     </div>
@@ -24,7 +24,8 @@
             return {
                 ruleForm: {
                     username: '',
-                    password: ''
+                    password: '',
+                    errormsg:''
                 },
                 rules: {
                     username: [
@@ -33,32 +34,14 @@
                     password: [
                         { required: true, message: '请输入密码', trigger: 'blur' }
                     ]
-                },
-                errorMsg:'',
-                url:'/'
+                }
             }
-
         },
         methods: {
             submitForm(formName) {
                 const self = this;
                 self.$refs[formName].validate((valid) => {
                     if (valid) {
-                        var param = {  //传给后端的数据
-                            username:self.ruleForm.username,
-                            password:self.ruleForm.password
-                        };
-                        self.$axios.post(self.url,param).then((res) => {   //调用后端接口进行登录
-                            console.log(res.data.success);
-                            if (res.data.success){  //登录成功
-                                localStorage.setItem('USERNAME',self.ruleForm.username);
-                                localStorage.setItem('JWT_TOKEN',res.data.result);
-                                self.$router.push('/readme');
-                            }else {
-                                self.errorMsg = res.data.error;
-                            }
-                        })
-
                         localStorage.setItem('ms_username',self.ruleForm.username);
                         self.$router.push('/readme');
                     } else {

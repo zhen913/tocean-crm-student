@@ -40,8 +40,8 @@ module.exports = {
                 changeOrigin: true
             },
             '/student':{
-                target:'http://192.168.4.159:8090',
-                changeOrigin:true
+                target: 'http://192.168.4.145:8090',
+                changeOrigin: true
             }
         },
         // CSS Sourcemaps off by default because relative paths are "buggy"
