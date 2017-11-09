@@ -83,8 +83,8 @@
                         title: '上传简历'
                     },
                     {
-                        icon: 'el-icon-upload',
-                        index: 'drag',
+                        icon: 'el-icon-upload2',
+                        index: 'jobapplication',
                         title: '就业申请'
                     },
                     {
