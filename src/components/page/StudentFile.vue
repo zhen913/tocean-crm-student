@@ -7,9 +7,8 @@
             </el-breadcrumb>
         </div>
         <div class="plugins-tips">
-            
-        </div>
 
+            </div>
     </div>
 </template>
 
