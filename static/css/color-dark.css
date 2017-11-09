@@ -5,9 +5,10 @@
     background: #324157;
 }
 .plugins-tips{
-    background: #eef1f6;
+    background:#EEF7FD;
+    border:1px  solid #B3CDE8;
 }
-.plugins-tips a{
+.plugins-tips {
     color: #20a0ff;
 }
 .el-upload--text em {

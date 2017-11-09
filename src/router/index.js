@@ -17,12 +17,9 @@ export default new Router({
                     path: '/',
                     component: resolve => require(['../components/page/Readme.vue'], resolve)
                 },
+
                 {
-                    path: '/submitjob',
-                    component: resolve => require(['../components/page/SubmitJob.vue'], resolve)//提交作业
-                },
-                {
-                    path: '/SubmitProject',
+                    path: '/submitproject',
                     component: resolve => require(['../components/page/SubmitProject.vue'], resolve)     // vue-datasource组件
                 },
                 {
@@ -48,6 +45,21 @@ export default new Router({
                 {
                     path: '/drag',
                     component: resolve => require(['../components/page/DragList.vue'], resolve)    // 拖拽列表组件
+                },
+                {
+                    path: '/jobapplication',
+                    component: resolve => require(['../components/page/JobApplication.vue'], resolve)    // 拖拽列表组件
+                },    {
+                    path: '/uploadresume',
+                    component: resolve => require(['../components/page/UploadResume.vue'], resolve)    // 拖拽列表组件
+                },
+                {
+                    path: '/studentfile',
+                    component: resolve => require(['../components/page/StudentFile.vue'], resolve)
+                },
+                {
+                    path: '/submitjob',
+                    component: resolve => require(['../components/page/SubmitJob.vue'], resolve)
                 }
             ]
         },
