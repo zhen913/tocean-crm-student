@@ -20,19 +20,19 @@
                 <el-collapse-transition>
                     <div v-show="show3" style="margin:5px 15px;">
                         <div class="transition-box">
-                               <div class="bg-purple" >简历:</div>
-                               <div style="flex-grow: 1;">
+                            <div class="bg-purple" >简历:</div>
+                            <div style="flex-grow: 1;">
                                 <el-row :gutter="20">
                                     <el-col :span="18">
-                                    <div class="grid-content bg-purple-light" style="flex-grow: 1;margin-right: 0;">
-                                    <el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="input21">
-                                    </el-input>
-                                    </div>
+                                        <div class="grid-content bg-purple-light" style="flex-grow: 1;margin-right: 0;">
+                                            <el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="input21">
+                                            </el-input>
+                                        </div>
                                     </el-col>
-                                <el-col :span="2"><div class="grid-content row-bg">
-                                    <input type="button" value="预览..."/>
-                                </div></el-col>
-                            </el-row>
+                                    <el-col :span="2"><div class="grid-content row-bg">
+                                        <input type="button" value="预览..."/>
+                                    </div></el-col>
+                                </el-row>
                             </div>
                         </div>
                     </div>

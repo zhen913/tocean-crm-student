@@ -18,76 +18,58 @@
                     <template slot="title">
                         申请列表（+点击标题栏展开）
                     </template>
+
                     <el-table
-                        :data="tableData3"
-                        height="250"
+                        :data="tableData"
                         border
                         style="width: 100%">
                         <el-table-column
+                            prop="number"
+                            label="学号"
+                            width="80">
+                        </el-table-column>
+                        <el-table-column
                             prop="name"
                             label="姓名"
-                            width="180">
+                            width="80">
                         </el-table-column>
                         <el-table-column
                             prop="class"
                             label="班级"
                             width="180">
                         </el-table-column>
+
                         <el-table-column
                             prop="direction"
-                            label="期望就业方向">
-                            <el-select v-model="value" placeholder="Android">
-                                <i class="el-icon-caret-bottom"></i>
-                                <el-option
-                                    v-for="item in options"
-                                    :key="item.value"
-                                    :label="item.label"
-                                    :value="item.value">
-
-                                </el-option>
-                            </el-select>
-
+                            label="期望就业方向"
+                            width="180">
                         </el-table-column>
-
                         <el-table-column
                             prop="address"
-                            label="期望就业地点">
-                            <el-select v-model="value" placeholder="广州">
-                                <i class="el-icon-caret-bottom"></i>
-                                <el-option
-                                    v-for="item in options"
-                                    :key="item.value"
-                                    :label="item.label"
-                                    :value="item.value">
-                                </el-option>
-                            </el-select>
+                            label="期望就业地点"
+                            width="180">
                         </el-table-column>
-
                         <el-table-column
                             prop="time"
-                            label="期望推荐时间">
-                            <el-input v-model="input" placeholder="请输入内容"></el-input>
+                            label="期望推荐时间"
+                            width="200">
+
                         </el-table-column>
                         <el-table-column
-                            prop="tuoshen"
-                            label="是否需要拓胜推荐">
-                            <i class="el-icon-caret-bottom"></i>
-
-                            <el-select v-model="value" placeholder="是">
-                                <el-option
-                                    v-for="item in options"
-                                    :key="item.value"
-                                    :label="item.label"
-                                    :value="item.value">
-                                </el-option>
-                            </el-select>
+                            prop="tuijian"
+                            label="是否需要拓胜推荐"
+                        >
                         </el-table-column>
-            </el-table>
+
+                    </el-table>
+
+
                 </el-collapse-item>
             </el-collapse>
-            <div style="margin-top: 0;padding-top: 0;">
 
-            </div>
+
+
+            <div style="margin-top: 0;padding-top: 0;"></div>
         </div>
         <div class="plugins-tips" style="text-align: center;">
             <input type="button" value="确认提交" style="color: #1A438E;margin-right: 20px;"/>
@@ -98,45 +80,85 @@
 
 
 
-
-
 <script>
+    import ElFormItem from "../../../node_modules/element-ui/packages/form/src/form-item";
+
     export default {
-        data() {
+        components: {ElFormItem}, data() {
             return {
-                options: [{
-                    value: '选项1',
-                    label: 'Android'
+                formInline: {
+                    user: '',
+                    region: ''
+                },
+                tableData: [{
+                    number:'1',
+                    name: '徐子荣',
+                    class: '信管',
+                    direction: '前端',
+                    address:'广州',
+                    time:'2017-09-10',
+                    tuijian:'是'
+
+
                 }, {
-                    value: '选项2',
-                    label: 'Java'
+                    number:'2',
+                    name: '杨紫',
+                    class: '信管',
+                    direction: '前端',
+                    address:'广州',
+                    time:'2017-09-10',
+                    tuijian:'是'
                 }, {
-                    value: '选项3',
-                    label: 'php'
-                }, {
-                    value: '选项4',
-                    label: 'python'
-                }, {
-                    value: '选项5',
-                    label: 'C++'
-                }, {
-                    value: '选项3',
-                    label: 'C#'
-                }, {
-                    value: '选项3',
-                    label: '测试方向'
+                    number:'3',
+                    name: '周杰伦',
+                    class: '信管',
+                    direction: '前端',
+                    address:'广州',
+                    time:'2017-09-10',
+                    tuijian:'是'
+
                 }],
-                value: ''
+                pickerOptions2: {
+                    shortcuts: [{
+                        text: '最近一周',
+                        onClick(picker) {
+                            const end = new Date();
+                            const start = new Date();
+                            start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);
+                            picker.$emit('pick', [start, end]);
+                        }
+                    }, {
+                        text: '最近一个月',
+                        onClick(picker) {
+                            const end = new Date();
+                            const start = new Date();
+                            start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);
+                            picker.$emit('pick', [start, end]);
+                        }
+                    }, {
+                        text: '最近三个月',
+                        onClick(picker) {
+                            const end = new Date();
+                            const start = new Date();
+                            start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);
+                            picker.$emit('pick', [start, end]);
+                        }
+                    }]
+                },
+                value6: ''
+
+            };
+        },
+        methods: {
+            onSubmit() {
+                console.log('submit!');
             }
         }
     }
-
-
-
-
-
-
 </script>
+
+
+
 <style>
     .title{
         border:1px  solid #B3CDE8;

@@ -2,26 +2,26 @@
     <div>
         <div class="gn">
         <p class="t-dq">当前功能：</p>
-        <p class="t-zy">学员违纪信息查询</p>
+        <p class="t-zy">项目考核信息查询</p>
         </div>
         <div class="biao">
             <div>
                 <el-form :inline="true" :model="formInline" class="demo-form-inline">
                     <el-form-item label="班级">
-                        <el-select v-model="formInline.banji" placeholder="">
+                        <el-select v-model="formInline.region" placeholder="">
                             <el-option label="信管" value="xingguang"></el-option>
                             <el-option label="软件" value="ruanjian"></el-option>
                             <el-option label="计应" value="jiying"></el-option>
                         </el-select>
                     </el-form-item>
                     <el-form-item label="学员">
-                        <el-input v-model="formInline.xueyuan" placeholder=""/>
+                        <el-input v-model="formInline.user" placeholder=""/>
                     </el-form-item>
                     <el-form-item>
                         <div class="block">
                             <span class="demonstration">时间：</span>
                             <el-date-picker
-                                v-model="value6"
+                                v-model="value7"
                                 type="daterange"
                                 align="right"
                                 unlink-panels
@@ -51,43 +51,47 @@
                             border
                             style="width: 100%">
                             <el-table-column
-                                prop="xuehao"
-                                label="学号"
+                                prop="xuhao"
+                                label="序号"
                                 width="80">
                             </el-table-column>
                             <el-table-column
-                                prop="xueyuan"
+                                prop="xuehao"
                                 label="学员"
-                                width="180">
+                                width="80">
                             </el-table-column>
                             <el-table-column
                                 prop="banji"
                                 label="班级"
                                 width="180">
                             </el-table-column>
+
                             <el-table-column
                                 prop="shijina"
-                                label="违纪时间"
+                                label="项目"
                                 width="180">
                             </el-table-column>
                             <el-table-column
                                 prop="qingkuan"
-                                label="情况"
+                                label="考核日期"
                                 width="200">
                             </el-table-column>
                             <el-table-column
-                                prop="taidu"
-                                label="学员违纪态度"
+                                prop="jiafen"
+                                label="考核类型"
                                 >
                             </el-table-column>
-
+                            <el-table-column
+                                prop="jiafen"
+                                label="分数"
+                            >
+                            </el-table-column>
                         </el-table>
                     </div>
 
                 </el-collapse-item>
             </el-collapse>
         </div>
-
         <div class="jdt">
 
             <el-pagination
@@ -142,40 +146,27 @@
     export default {
         components: {ElFormItem}, data() {
             return {
-                activeNames: ['1'],
                 formInline: {
                     user: '',
                     region: ''
                 },
                 tableData: [{
+                    xuhao:'01',
                     xuehao: '1',
-                    xueyuan: '小丘',
+                    xueyuan: 'AA',
                     banji: '信管',
                     shijina:'2017-09-10',
-                    qingkuan:'早上迟到',
-                    taidu:'态度恶劣'
+                    qingkuan:'美若天仙',
+                   jiafen:'+10'
 
                 }, {
+                    xuhao:'02',
                     xuehao: '2',
-                    xueyuan: '小李',
+                    xueyuan: 'CCC',
                     banji: '软件',
                     shijina:'2017-09-15',
-                    qingkuan:'旷课',
-                    taidu:'态度良好'
-                }, {
-                    xuehao: '3',
-                    xueyuan: '小陈',
-                    banji: '信管',
-                    shijina:'2017-5-4',
-                    qingkuan:'早上迟到',
-                    taidu:'态度良好'
-                }, {
-                    xuehao: '4',
-                    xueyuan: '小林',
-                    banji: '计应',
-                    shijina:'2017-6-6',
-                    qingkuan:'旷课',
-                    taidu:'态度良好'
+                    qingkuan:'王者坑王',
+                    jiafen:'+8'
                 }],
                 pickerOptions2: {
                     shortcuts: [{
