@@ -17,23 +17,10 @@ export default new Router({
                     path: '/',
                     component: resolve => require(['../components/page/Readme.vue'], resolve)
                 },
-                {
-                    path: '/submintreporttable',
-                    component: resolve => require(['../components/page/SubmitReport.vue'], resolve)     //SubmitReport调查列表页面
-                },
-                ,
-                {
-                    path: '/vueeditor',
-                    component: resolve => require(['../components/page/ARecords.vue'], resolve)     //ARecords考勤记录页面
-                },
-                {
 
-                    path: '/basetable',
-                    component: resolve => require(['../components/page/BaseTable.vue'], resolve)
-                },
                 {
-                    path: '/vuetable',
-                    component: resolve => require(['../components/page/VueTable.vue'], resolve)     // vue-datasource组件
+                    path: '/submitproject',
+                    component: resolve => require(['../components/page/SubmitProject.vue'], resolve)     // vue-datasource组件
                 },
                 {
                     path: '/baseform',
@@ -44,8 +31,12 @@ export default new Router({
                     component: resolve => require(['../components/page/VueEditor.vue'], resolve)    // Vue-Quill-Editor组件
                 },
                 {
-                    path: '/markdown',
-                    component: resolve => require(['../components/page/Markdown.vue'], resolve)     // Vue-Quill-Editor组件
+                    path: '/DisciplinaryRecord',
+                    component: resolve => require(['../components/page/DisciplinaryRecord.vue'], resolve)     // Vue-Quill-Editor组件
+                },
+                {
+                    path: '/PraiseRecord',
+                    component: resolve => require(['../components/page/PraiseRecord.vue'], resolve)     // Vue-Quill-Editor组件
                 },
                 {
                     path: '/upload',
@@ -69,7 +60,12 @@ export default new Router({
                 {
                     path: '/studentfile',
                     component: resolve => require(['../components/page/StudentFile.vue'], resolve)
+                },
+                {
+                    path: '/submitjob',
+                    component: resolve => require(['../components/page/SubmitJob.vue'], resolve)
                 }
+
             ]
         },
         {

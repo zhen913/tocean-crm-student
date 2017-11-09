@@ -4,13 +4,13 @@
             <template v-for="item in items">
                 <template v-if="item.subs">
                     <el-submenu :index="item.index">
-                        <template slot="title"><i :class="item.icon"></i>{{ item.title }}</template>
-                        <el-menu-item v-for="(subItem,i) in item.subs" :key="i" :index="subItem.index">{{ subItem.title }}
+                        <template slot="title" style="height: 35px;"><i :class="item.icon"></i>{{ item.title }}</template>
+                        <el-menu-item style="height: 35px;" v-for="(subItem,i) in item.subs" :key="i" :index="subItem.index">{{ subItem.title }}
                         </el-menu-item>
                     </el-submenu>
                 </template>
                 <template v-else>
-                    <el-menu-item :index="item.index">
+                    <el-menu-item :index="item.index" style="height: 35px;">
                         <i :class="item.icon"></i>{{ item.title }}
                     </el-menu-item>
                 </template>
@@ -31,12 +31,12 @@
                     },
                     {
                         icon: 'el-icon-star-on',
-                        index: 'basecharts',
+                        index: 'submitjob',
                         title: '提交作业'
                     },
                     {
                         icon: 'el-icon-star-on',
-                        index: 'basecharts',
+                        index: 'submitproject',
                         title: '提交项目'
                     },
                     {
@@ -101,11 +101,11 @@
                                 title: '考勤记录'
                             },
                             {
-                                index: 'markdown',
+                                index: 'DisciplinaryRecord',
                                 title: '违纪记录'
                             },
                             {
-                                index: 'markdown',
+                                index: 'PraiseRecord',
                                 title: '表扬记录'
                             },
                             {
@@ -156,6 +156,6 @@
         background: #2E363F;
     }
     .sidebar > ul {
-        height:100%;
+        height: 100%;
     }
 </style>

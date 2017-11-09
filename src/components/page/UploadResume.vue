@@ -42,7 +42,7 @@
             <input type="button" value="确认提交" style="color: #1A438E;margin-right: 20px;"/>
             <input type="button" value="重新输入" style="color: #1A438E"/>
         </div>
-</div>
+    </div>
 </template>
 <style>
     .title{

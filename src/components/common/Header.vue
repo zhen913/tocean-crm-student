@@ -24,7 +24,7 @@
         computed:{
             username(){
                 let username = localStorage.getItem('USERNAME');
-                return username ? username : this.name;
+                return username ? username : '未登录';
             }
         },
         methods:{
