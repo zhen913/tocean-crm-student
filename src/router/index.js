@@ -27,6 +27,7 @@ export default new Router({
                     component: resolve => require(['../components/page/ARecords.vue'], resolve)     //ARecords考勤记录页面
                 },
                 {
+
                     path: '/basetable',
                     component: resolve => require(['../components/page/BaseTable.vue'], resolve)
                 },
@@ -59,6 +60,9 @@ export default new Router({
                     component: resolve => require(['../components/page/DragList.vue'], resolve)    // 拖拽列表组件
                 },
                 {
+                    path: '/jobapplication',
+                    component: resolve => require(['../components/page/JobApplication.vue'], resolve)    // 拖拽列表组件
+                },    {
                     path: '/uploadresume',
                     component: resolve => require(['../components/page/UploadResume.vue'], resolve)    // 拖拽列表组件
                 },
