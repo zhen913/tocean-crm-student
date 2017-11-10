@@ -63,8 +63,15 @@
             </div>
         </div>
         <div class="plugins-tips" style="text-align: center;">
-            <input type="button" value="确认提交" style="color: #1A438E;margin-right: 20px;"/>
-            <input type="button" value="重新输入" style="color: #1A438E"/>
+            <el-pagination
+                @size-change="handleSizeChange"
+                @current-change="handleCurrentChange"
+                :current-page="currentPage4"
+                :page-sizes="[10, 50, 100, 200, 300, 500]"
+                :page-size="10"
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="10000">
+            </el-pagination>
         </div>
     </div>
 </template>
@@ -97,4 +104,5 @@
             }
         }
     }
+
 </script>
