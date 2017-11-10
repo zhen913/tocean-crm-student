@@ -9,18 +9,23 @@
         <div class="plugins-tips" style="text-align: right; height: 35px;">
             <el-form :inline="true" :model="formInline" class="demo-form-inline">
                 <el-form-item label="班级：">
-                    <el-select v-model="formInline.region" style="width: 150px;">
-                        <el-option label=""></el-option>
+                    <el-select v-model="value1" placeholder="请选择" style="width: 120px;">
+                        <el-option
+                            v-for="item in options"
+                            :key="item.value"
+                            :label="item.label"
+                            :value="item.value">
+                        </el-option>
                     </el-select>
                 </el-form-item>
 
                 <el-form-item label="学员：">
-                    <el-input v-model="formInline.user" style="width: 150px;"></el-input>
+                    <el-input v-model="formInline.user" style="width: 120px;"></el-input>
                 </el-form-item>
 
                 <el-form-item label="时间：">
                     <el-date-picker
-                        v-model="value3"
+                        v-model="value2"
                         type="datetimerange"
                         range-separator="至"
                         start-placeholder="开始日期"
@@ -29,8 +34,7 @@
                 </el-form-item>
 
                 <el-form-item>
-                    <el-select v-model="formInline.region" style="width: 90px;">
-                        <el-option label=""></el-option>
+                    <el-select v-model="value3" style="width: 90px;">
                         <el-option label="正常" value="normal"></el-option>
                         <el-option label="请假" value="askleave"></el-option>
                         <el-option label="迟到" value="late"></el-option>
@@ -77,32 +81,32 @@
 </template>
 <script>
     export default {
-        data: () => ({
-            show3: true
-        }),
         data() {
             return {
                 formInline: {
                     user: '',
                     region: ''
-                }
-            }
-        },
-        methods: {
-            onSubmit() {
-                console.log('submit!');
-            }
-        },
-        data() {
-            return {
-                formInline: {
-                    region: ''
                 },
-                pickerOptions2: {
-                    value3: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)]
-                }
+                options: [{
+                    value: '选项1', label: '一班'
+                }, {
+                    value: '选项2', label: '二班'
+                }, {
+                    value: '选项3', label: '三班'
+                }, {
+                    value: '选项4', label: '四班'
+                }, {
+                    value: '选项5', label: '五班'
+                }],
+                value1: '',
+                value2: '',
+                value3: ''
+            }
+        },
+        methods:{
+            onSubmit(){
+                console.log('submit!');
             }
         }
     }
-
 </script>
