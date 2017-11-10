@@ -64,6 +64,14 @@ export default new Router({
                 {
                     path: '/submitjob',
                     component: resolve => require(['../components/page/SubmitJob.vue'], resolve)
+                },
+                {
+                    path: '/submintreporttable',//调查报告
+                    component: resolve => require(['../components/page/SubmitReport.vue'], resolve)
+                },
+                {
+                    path: '/arecords',//考勤记录
+                    component: resolve => require(['../components/page/ARecords.vue'], resolve)
                 }
 
             ]

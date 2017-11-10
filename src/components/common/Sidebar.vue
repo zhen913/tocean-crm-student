@@ -97,7 +97,7 @@
                                 title: '学员档案'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'arecords',
                                 title: '考勤记录'
                             },
                             {
