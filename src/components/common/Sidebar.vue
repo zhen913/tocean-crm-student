@@ -125,7 +125,7 @@
                                 title: '演讲查询'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'groupdiscussionquery',
                                 title: '分组讨论查询'
                             },
                             {
