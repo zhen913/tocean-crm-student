@@ -129,7 +129,7 @@
                                 title: '分组讨论查询'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'evaluation',
                                 title: '综合评分'
                             },
                         ]

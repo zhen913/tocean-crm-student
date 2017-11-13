@@ -72,6 +72,10 @@ export default new Router({
                 {
                     path: '/arecords',//考勤记录
                     component: resolve => require(['../components/page/ARecords.vue'], resolve)
+                },
+                {
+                    path: '/evaluation',//综合评分
+                    component: resolve => require(['../components/page/Evaluation.vue'], resolve)
                 }
 
             ]
