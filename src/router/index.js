@@ -74,6 +74,10 @@ export default new Router({
                     component: resolve => require(['../components/page/ARecords.vue'], resolve)
                 },
                 {
+                    path: '/jobcompletion',//作业完成情况
+                    component: resolve => require(['../components/page/JobCompletion.vue'], resolve)
+                },
+                {
                     path: '/evaluationenthusiasm',//班级管理积极性
                     component: resolve => require(['../components/page/EvaluationEnthusiasm.vue'], resolve)
                 },

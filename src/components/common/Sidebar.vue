@@ -109,7 +109,7 @@
                                 title: '表扬记录'
                             },
                             {
-                                index: 'JobCompletion',
+                                index: 'jobcompletion',
                                 title: '作业完成情况'
                             },
                             {
