@@ -113,7 +113,7 @@
                                 title: '作业完成情况'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'projectassessment',
                                 title: '项目管理积极性'
                             },
                             {
