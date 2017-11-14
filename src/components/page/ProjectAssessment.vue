@@ -6,7 +6,8 @@
                 <el-breadcrumb-item style="color:#1A438E;font-size:0.8em">项目考核信息查询</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
-        <div class="plugins-tips" style="text-align: right; height: 35px;">
+
+        <div class="plugins-tips" style="text-align: right; height: 100px;">
             <el-form :inline="true" :model="formInline" class="demo-form-inline">
                 <el-form-item label="班级：">
                     <el-select v-model="value1" placeholder="请选择" style="width: 120px;">
@@ -23,6 +24,20 @@
                     <el-input v-model="formInline.user" style="width: 120px;"></el-input>
                 </el-form-item>
 
+                <el-form-item label="考评类型：">
+                    <el-select v-model="value3" style="width: 90px;">
+                        <el-option label="初次考核" value="star"></el-option>
+                        <el-option label="最终考核" value="end"></el-option>
+                    </el-select>
+                </el-form-item>
+
+                <el-form-item label=" 项目：">
+                    <el-select v-model="value4" style="width: 90px;">
+                        <el-option label="ABC" value="proj1"></el-option>
+                        <el-option label="CBA" value="proj2"></el-option>
+                    </el-select>
+                </el-form-item>
+
                 <el-form-item label="时间：">
                     <el-date-picker
                         v-model="value2"
@@ -33,15 +48,7 @@
                     </el-date-picker>
                 </el-form-item>
 
-                <el-form-item>
-                    <el-select v-model="value3" style="width: 90px;">
-                        <el-option label="正常" value="normal"></el-option>
-                        <el-option label="请假" value="askleave"></el-option>
-                        <el-option label="迟到" value="late"></el-option>
-                        <el-option label="早退" value="retreat"></el-option>
-                        <el-option label="旷课" value="truancy"></el-option>
-                    </el-select>
-                </el-form-item>
+
 
                 <el-form-item>
                     <el-button type="primary" @click="onSubmit">查询</el-button>
@@ -55,11 +62,10 @@
                     <el-table :data="tableData3" height="250" border style="width: 100%">
                         <el-table-column prop="number" label="序号" width="120"></el-table-column>
                         <el-table-column prop="name" label="学员" width="150"></el-table-column>
-                        <el-table-column prop="class" label="班级" width="150"></el-table-column>
-                        <el-table-column prop="dates" label="日期" width="160"></el-table-column>
-                        <el-table-column prop="starttime" label="开始时间" width="160"></el-table-column>
-                        <el-table-column prop="endtime" label="结束时间" width="160"></el-table-column>
-                        <el-table-column prop="state" label="状态" width="160"></el-table-column>
+                        <el-table-column prop="projects" label="项目" width="160"></el-table-column>
+                        <el-table-column prop="dates" label="考核日期" width="250"></el-table-column>
+                        <el-table-column prop="type" label="考核类型" width="220"></el-table-column>
+                        <el-table-column prop="score" label="分数" width="160"></el-table-column>
                     </el-table>
                 </el-collapse-item>
             </el-collapse>
