@@ -58,10 +58,10 @@
                         <el-table-column prop="class" label="班级" width="120"></el-table-column>
                         <el-table-column prop="name" label="学员" width="110"></el-table-column>
                         <el-table-column prop="dates" label="演讲日期" width="160"></el-table-column>
-                        <el-table-column prop="starttime" label="演讲内容" width="220"></el-table-column>
-                        <el-table-column prop="endtime" label="项目经理" width="110"></el-table-column>
-                        <el-table-column prop="state" label="评价" width="100"></el-table-column>
-                        <el-table-column prop="state" label="评分" width="90"></el-table-column>
+                        <el-table-column prop="content" label="演讲内容" width="220"></el-table-column>
+                        <el-table-column prop="manager" label="项目经理" width="110"></el-table-column>
+                        <el-table-column prop="appraise" label="评价" width="100"></el-table-column>
+                        <el-table-column prop="score" label="评分" width="90"></el-table-column>
                     </el-table>
                 </el-collapse-item>
             </el-collapse>
