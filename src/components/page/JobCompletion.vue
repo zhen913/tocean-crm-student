@@ -47,10 +47,10 @@
                         <el-table-column prop="number" label="序号" width="90"></el-table-column>
                         <el-table-column prop="name" label="学员" width="120"></el-table-column>
                         <el-table-column prop="class" label="班级" width="120"></el-table-column>
-                        <el-table-column prop="dates" label="作业标题" width="180"></el-table-column>
-                        <el-table-column prop="starttime" label="布置日期" width="180"></el-table-column>
-                        <el-table-column prop="endtime" label="课程" width="250"></el-table-column>
-                        <el-table-column prop="state" label="分数" width="120"></el-table-column>
+                        <el-table-column prop="jobtitle" label="作业标题" width="180"></el-table-column>
+                        <el-table-column prop="layoutdate" label="布置日期" width="180"></el-table-column>
+                        <el-table-column prop="courses" label="课程" width="250"></el-table-column>
+                        <el-table-column prop="fractions" label="分数" width="120"></el-table-column>
                     </el-table>
                 </el-collapse-item>
             </el-collapse>
