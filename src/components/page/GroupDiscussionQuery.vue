@@ -86,8 +86,7 @@
         data() {
             return {
                 formInline: {
-                    user: '',
-                    region: ''
+                    user: ''
                 },
                 options: [{
                     value: '选项1', label: '一班'

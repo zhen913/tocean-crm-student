@@ -117,7 +117,7 @@
                                 title: '项目管理积极性'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'evaluationenthusiasm',
                                 title: '班级管理积极性'
                             },
                             {

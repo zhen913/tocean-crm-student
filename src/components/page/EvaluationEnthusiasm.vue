@@ -3,7 +3,7 @@
         <div class="plugins-tips">
             <el-breadcrumb separator="：">
                 <el-breadcrumb-item><i class="el-icon-date"></i> 当前功能</el-breadcrumb-item>
-                <el-breadcrumb-item style="color:#1A438E;font-size:0.8em">学员考勤信息查询</el-breadcrumb-item>
+                <el-breadcrumb-item style="color:#1A438E;font-size:0.8em">班级考评积极性查询</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="plugins-tips" style="text-align: right; height: 35px;">
@@ -23,26 +23,6 @@
                     <el-input v-model="formInline.user" style="width: 120px;"></el-input>
                 </el-form-item>
 
-                <el-form-item label="时间：">
-                    <el-date-picker
-                        v-model="value2"
-                        type="datetimerange"
-                        range-separator="至"
-                        start-placeholder="开始日期"
-                        end-placeholder="结束日期">
-                    </el-date-picker>
-                </el-form-item>
-
-                <el-form-item>
-                    <el-select v-model="value3" style="width: 90px;">
-                        <el-option label="正常" value="normal"></el-option>
-                        <el-option label="请假" value="askleave"></el-option>
-                        <el-option label="迟到" value="late"></el-option>
-                        <el-option label="早退" value="retreat"></el-option>
-                        <el-option label="旷课" value="truancy"></el-option>
-                    </el-select>
-                </el-form-item>
-
                 <el-form-item>
                     <el-button type="primary" @click="onSubmit">查询</el-button>
                 </el-form-item>
@@ -51,15 +31,14 @@
         <div class="title">
             <el-collapse accordion>
                 <el-collapse-item>
-                    <template slot="title">学员考勤信息列表（+点击标题栏展开）</template>
+                    <template slot="title">班级考评积极性列表（+点击标题栏展开）</template>
                     <el-table :data="tableData3" height="250" border style="width: 100%">
-                        <el-table-column prop="number" label="序号" width="120"></el-table-column>
+                        <el-table-column prop="number" label="序号" width="90"></el-table-column>
                         <el-table-column prop="name" label="学员" width="150"></el-table-column>
-                        <el-table-column prop="class" label="班级" width="150"></el-table-column>
-                        <el-table-column prop="dates" label="日期" width="160"></el-table-column>
-                        <el-table-column prop="starttime" label="开始时间" width="160"></el-table-column>
-                        <el-table-column prop="endtime" label="结束时间" width="160"></el-table-column>
-                        <el-table-column prop="state" label="状态" width="160"></el-table-column>
+                        <el-table-column prop="class" label="班级" width="180"></el-table-column>
+                        <el-table-column prop="dates" label="参与考评次数" width="230"></el-table-column>
+                        <el-table-column prop="starttime" label="有效次数" width="230"></el-table-column>
+                        <el-table-column prop="endtime" label="得分" width="180"></el-table-column>
                     </el-table>
                 </el-collapse-item>
             </el-collapse>
@@ -97,9 +76,7 @@
                 }, {
                     value: '选项5', label: '五班'
                 }],
-                value1: '',
-                value2: '',
-                value3: ''
+                value1: ''
             }
         },
         methods:{
