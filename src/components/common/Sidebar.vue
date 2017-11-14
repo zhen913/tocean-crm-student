@@ -121,7 +121,7 @@
                                 title: '班级管理积极性'
                             },
                             {
-                                index: 'vueeditor',
+                                index: 'speechquery',
                                 title: '演讲查询'
                             },
                             {

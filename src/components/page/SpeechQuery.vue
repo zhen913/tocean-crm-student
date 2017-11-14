@@ -3,7 +3,7 @@
         <div class="plugins-tips">
             <el-breadcrumb separator="：">
                 <el-breadcrumb-item><i class="el-icon-date"></i> 当前功能</el-breadcrumb-item>
-                <el-breadcrumb-item style="color:#1A438E;font-size:0.8em">分组讨论查询</el-breadcrumb-item>
+                <el-breadcrumb-item style="color:#1A438E;font-size:0.8em">学员演讲查询</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="plugins-tips" style="text-align: right; height: 35px;">
@@ -19,18 +19,12 @@
                     </el-select>
                 </el-form-item>
 
-                <el-form-item label="分组：">
-                    <el-select v-model="value3" style="width: 90px;">
-                        <el-option label="第一组" value="group1"></el-option>
-                        <el-option label="第二组" value="group2"></el-option>
-                        <el-option label="第三组" value="group3"></el-option>
-                        <el-option label="第四组" value="group4"></el-option>
-                        <el-option label="第五组" value="group5"></el-option>
-                    </el-select>
+                <el-form-item label="学员：">
+                    <el-input v-model="formInline.user" style="width: 110px;"></el-input>
                 </el-form-item>
 
                 <el-form-item label="项目经理：">
-                    <el-input v-model="formInline.user" style="width: 120px;"></el-input>
+                    <el-input v-model="formInline.users" style="width: 110px;"></el-input>
                 </el-form-item>
 
                 <el-form-item label="时间：">
@@ -51,7 +45,7 @@
         <div class="title">
             <el-collapse accordion>
                 <el-collapse-item>
-                    <template slot="title">分组讨论信息列表（+点击标题栏展开）</template>
+                    <template slot="title">学员演讲信息列表（+点击标题栏展开）</template>
                     <el-table :data="tableData3" height="250" border style="width: 100%">
                         <el-table-column type="selection" width="70"></el-table-column>
                         <el-table-column prop="number" label="序号" width="80"></el-table-column>
@@ -87,7 +81,7 @@
             return {
                 formInline: {
                     user: '',
-                    region: ''
+                    users:''
                 },
                 options: [{
                     value: '选项1', label: '一班'
@@ -101,8 +95,7 @@
                     value: '选项5', label: '五班'
                 }],
                 value1: '',
-                value2: '',
-                value3: ''
+                value2: ''
             }
         },
         methods:{

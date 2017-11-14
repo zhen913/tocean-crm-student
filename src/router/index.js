@@ -74,6 +74,10 @@ export default new Router({
                     component: resolve => require(['../components/page/ARecords.vue'], resolve)
                 },
                 {
+                    path: '/speechquery',//演讲查询
+                    component: resolve => require(['../components/page/SpeechQuery.vue'], resolve)
+                },
+                {
                     path: '/groupdiscussionquery',//分组讨论查询
                     component: resolve => require(['../components/page/GroupDiscussionQuery.vue'], resolve)
                 },
