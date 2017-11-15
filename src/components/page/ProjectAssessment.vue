@@ -48,7 +48,11 @@
                     </el-date-picker>
                 </el-form-item>
 
-
+                <el-form-item label="得分：">
+                    <el-input v-model="formInline.score1" style="width: 100px;"></el-input>
+                    <label>-</label>
+                    <el-input v-model="formInline.score2" style="width: 100px;"></el-input>
+                </el-form-item>
 
                 <el-form-item>
                     <el-button type="primary" @click="onSubmit">查询</el-button>
@@ -86,11 +90,14 @@
     </div>
 </template>
 <script>
+    import ElInput from "../../../node_modules/element-ui/packages/input/src/input";
     export default {
-        data() {
+        components: {ElInput}, data() {
             return {
                 formInline: {
-                    user: ''
+                    user: '',
+                    score1:'',
+                    score2:''
                 },
                 options: [{
                     value: '选项1', label: '一班'
@@ -105,7 +112,8 @@
                 }],
                 value1: '',
                 value2: '',
-                value3: ''
+                value3: '',
+                value4: ''
             }
         },
         methods:{
