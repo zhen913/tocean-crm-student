@@ -10,7 +10,7 @@
                     </el-submenu>
                 </template>
                 <template v-else>
-                    <el-menu-item :index="item.index" style="height: 35px;">
+                    <el-menu-item :index="item.index" style="height: 45px;">
                         <i :class="item.icon"></i>{{ item.title }}
                     </el-menu-item>
                 </template>
@@ -25,12 +25,7 @@
             return {
                 items: [
                     {
-                        icon: 'el-icon-setting',
-                        index: 'readme',
-                        title: '自述'
-                    },
-                    {
-                        icon: 'el-icon-star-on',
+                        icon: 'el-icon-star-off',
                         index: 'submitjob',
                         title: '提交作业'
                     },
@@ -40,7 +35,7 @@
                         title: '提交项目'
                     },
                     {
-                        icon: 'el-icon-menu',
+                        icon: 'el-icon-edit',
                         index: '1',
                         title: '提交报告',
                         subs: [
@@ -152,7 +147,7 @@
         width: 250px;
         left: 0;
         top: 70px;
-        bottom:0;
+        bottom: 0;
         background: #2E363F;
     }
     .sidebar > ul {
